@@ -1,34 +1,34 @@
-let answerFirst = +prompt("Type number");
-if (answerFirst %2 ==0) {
+let numberFirst = +prompt("Type number");
+if (numberFirst %2 ==0) {
     console.log("False");
 } else {
     console.log("True");
 }
 
-let answerSecond = +prompt("Type anoter number");
-if (answerSecond %2 ==0) {
+let numberSecond = +prompt("Type anoter number");
+if (numberSecond %2 ==0) {
     console.log("False");
 } else {
     console.log("True");
 }
 
-const answerChosen = confirm("Primes")
+const answerChosen = confirm("Skip primes?") // primes - парні числа
 console.log(answerChosen)
 
 let result = 0;
 if (!answerChosen) {
-    for (answerFirst; answerFirst <= answerSecond; answerFirst++) {
-        result+= answerFirst;
+    for (numberFirst; numberFirst <= numberSecond; numberFirst++) {
+        result+= numberFirst;
     }
-    console.log(result)
+    alert(result)
 } else {
-    for (answerFirst; answerFirst <= answerSecond; answerFirst++) {
-        if (answerFirst % 2 == 0) {
+    for (numberFirst; numberFirst <= numberSecond; numberFirst++) {
+        if (numberFirst % 2 == 0) {
             continue;
         }
         else {
-            result += answerFirst;
+            result += numberFirst;
         }
     }
-    console.log(result)
+    alert(result)
 }
